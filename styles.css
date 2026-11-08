@@ -1,0 +1,81 @@
+/* Spiral Galaxy */
+.spiral-galaxy.view-content {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  background: #03050f; /* (the stars and haze are painted on their own canvas) */
+}
+/* deep space: a little bigger than the view, so it can drift when you drag */
+.spiral-galaxy-sky {
+  position: absolute;
+  left: -5%;
+  top: -5%;
+  width: 110%;
+  height: 110%;
+  display: block;
+  pointer-events: none;
+  transform: translate(var(--spiral-galaxy-sky-x, 0), var(--spiral-galaxy-sky-y, 0));
+}
+/* the galaxy's dots, drawn by the graphics card */
+.spiral-galaxy-dots {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+}
+.spiral-galaxy-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: grab;
+}
+.spiral-galaxy-canvas.is-pointer { cursor: pointer; }
+.spiral-galaxy-canvas.is-grab { cursor: grab; }
+.spiral-galaxy-canvas.is-grabbing { cursor: grabbing; }
+
+.spiral-galaxy-hint {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: var(--font-ui-smaller);
+  color: rgba(214, 226, 255, 0.55);
+  pointer-events: none;
+  white-space: nowrap;
+}
+.spiral-galaxy-legend {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: rgba(4, 8, 22, 0.62);
+  border: 1px solid rgba(140, 170, 255, 0.18);
+  font-size: var(--font-ui-smaller);
+  color: #d6e0f5;
+  pointer-events: none;
+}
+.spiral-galaxy-legend.is-hidden { display: none; }
+.spiral-galaxy-row { display: flex; align-items: center; gap: 7px; line-height: 1.7; }
+.spiral-galaxy-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--spiral-galaxy-dot, #ffffff);
+  box-shadow: 0 0 6px var(--spiral-galaxy-dot, #ffffff);
+}
+.spiral-galaxy-spin {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: var(--font-ui-smaller);
+  padding: 3px 10px;
+  background: rgba(4, 8, 22, 0.62);
+  border: 1px solid rgba(140, 170, 255, 0.25);
+  color: #d6e0f5;
+}
+.spiral-galaxy-folders { width: 100%; min-width: 260px; font-family: var(--font-monospace); font-size: var(--font-ui-smaller); }

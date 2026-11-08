@@ -1,0 +1,9 @@
+{
+	"id": "spiral-galaxy",
+	"name": "Spiral Galaxy",
+	"version": "2.0.0",
+	"minAppVersion": "1.4.0",
+	"description": "See your vault as a spinning spiral galaxy. Folders become glowing arms and star clusters, notes become stars you can hover, click and swing around.",
+	"author": "Duck5562",
+	"isDesktopOnly": true
+}
